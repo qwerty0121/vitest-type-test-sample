@@ -24,7 +24,7 @@ function calculateTotalPrice(
 describe("Vitestによる型テストのサンプル", () => {
   // toEqualTypeOf: 特定の型が完全に一致することをテスト
   test("Product型は期待される構造と完全に一致すること", () => {
-    type ExpectedProduct = {
+    type ExpectedBookProduct = {
       id: number;
       name: string;
       price: number;
@@ -32,7 +32,7 @@ describe("Vitestによる型テストのサンプル", () => {
       createdAt: Date;
       isbn: string;
     };
-    expectTypeOf<BookProduct>().toEqualTypeOf<ExpectedProduct>();
+    expectTypeOf<BookProduct>().toEqualTypeOf<ExpectedBookProduct>();
   });
 
   // not: 否定の条件をテスト
